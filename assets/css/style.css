@@ -1,0 +1,741 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: -0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-menu li a:hover {
+    color: #3498db;
+}
+
+.login-btn {
+    background: white;
+    color: #2c3e50 !important;
+    padding: 0.7rem 1.5rem !important;
+    border-radius: 6px;
+    border: 2px solid #2c3e50;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #2c3e50 !important;
+    color: white !important;
+}
+
+.signup-btn {
+    background: #2c3e50;
+    color: white !important;
+    padding: 0.7rem 1.5rem !important;
+    border-radius: 6px;
+    border: 2px solid #2c3e50;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.signup-btn:hover {
+    background: white !important;
+    color: #2c3e50 !important;
+}
+
+/* Menu Hambúrguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    touch-action: manipulation;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #2c3e50;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Main Content */
+main {
+    margin-top: 80px;
+}
+
+/* Seções */
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+/* Grid de Notícias */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.news-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.card-image svg {
+    width: 100%;
+    height: 200px;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.card-content p {
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    touch-action: manipulation;
+}
+
+.read-more:hover {
+    color: #2980b9;
+}
+
+/* Seção Sobre */
+.about-section {
+    background: #f8f9fa;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #5a6c7d;
+}
+
+/* Seção Comunidade */
+.community-section p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: #5a6c7d;
+}
+
+.forum-topics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.topic {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.topic:active {
+    transform: scale(0.98);
+}
+
+.topic h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.topic p {
+    color: #7f8c8d;
+}
+
+/* Seção Filantropia */
+.philanthropy-section {
+    background: #f8f9fa;
+}
+
+.philanthropy-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.philanthropy-intro p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #5a6c7d;
+}
+
+.philanthropy-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.philanthropy-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.philanthropy-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.philanthropy-card p {
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+}
+
+.action-btn {
+    background: #27ae60;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    touch-action: manipulation;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.action-btn:hover {
+    background: #229954;
+}
+
+/* Seção de Impacto */
+.impact-section {
+    text-align: center;
+}
+
+.impact-section h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.stat h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #27ae60;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #7f8c8d;
+    touch-action: manipulation;
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close:hover {
+    color: #2c3e50;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ecf0f1;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    min-height: 44px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.auth-btn {
+    width: 100%;
+    background: #3498db;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    min-height: 44px;
+    touch-action: manipulation;
+}
+
+.auth-btn:hover {
+    background: #2980b9;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 1rem;
+    color: #7f8c8d;
+}
+
+.auth-switch a {
+    color: #3498db;
+    text-decoration: none;
+    touch-action: manipulation;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    touch-action: manipulation;
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+
+.copyright p {
+    margin: 0;
+    color: #bdc3c7;
+}
+
+/* Responsividade Mobile-First */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+        padding: 1.5rem 0;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 0.8rem 0;
+    }
+
+    .nav-menu li a {
+        font-size: 1.1rem;
+        padding: 0.8rem 1rem;
+        display: block;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-btn, .signup-btn {
+        margin: 0.5rem 1rem !important;
+        padding: 0.8rem 2rem !important;
+        font-size: 1rem !important;
+        min-height: 44px !important;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .nav-container {
+        padding: 0.8rem 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        margin-top: 70px;
+    }
+
+    section {
+        padding: 2.5rem 0;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .news-card {
+        margin: 0 0.5rem;
+    }
+
+    .card-content {
+        padding: 1.2rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-content p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .forum-topics {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .topic {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .philanthropy-areas {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .philanthropy-card {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat h4 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .social-links {
+        gap: 2rem;
+    }
+
+    .social-links a {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        padding: 0 0.8rem;
+    }
+
+    .news-card, .topic, .philanthropy-card {
+        margin: 0;
+    }
+
+    .card-content, .topic, .philanthropy-card {
+        padding: 1rem;
+    }
+
+    .impact-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .stat {
+        padding: 1.2rem;
+    }
+
+    .modal-content {
+        margin: 5% auto;
+        padding: 1.2rem;
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .form-group input {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+
+    .auth-btn {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+
+    .action-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Melhorias para toque em dispositivos móveis */
+@media (hover: none) and (pointer: coarse) {
+    .news-card:hover {
+        transform: none;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .news-card:active {
+        transform: scale(0.98);
+    }
+
+    .login-btn:hover, .signup-btn:hover {
+        transform: none;
+    }
+
+    .login-btn:active {
+        background: #2c3e50 !important;
+        color: white !important;
+    }
+
+    .signup-btn:active {
+        background: white !important;
+        color: #2c3e50 !important;
+    }
+
+    .action-btn:active {
+        background: #229954;
+        transform: scale(0.95);
+    }
+}
+
+/* Scroll suave para iOS */
+html {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Prevenção de zoom em inputs no iOS */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select, textarea, input[type="text"], input[type="password"], 
+    input[type="datetime"], input[type="datetime-local"], 
+    input[type="date"], input[type="month"], input[type="time"], 
+    input[type="week"], input[type="number"], input[type="email"], 
+    input[type="url"], input[type="search"], input[type="tel"] {
+        font-size: 16px;
+    }
+}
